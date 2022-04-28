@@ -10,7 +10,7 @@
 <div id = "instrament-app">
 
     <div id="cart">
-        <button>Cart</button>
+        <button v-on:click="clearCart()">Cart {{cartTotal}}</button>
     </div>
 
     <div id = "formForThing">
@@ -18,17 +18,12 @@
     </div>
 
     <div id="items">
-        <!-- <a v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"> -->
         <div v-for = "card in cards" class = "card">
-            <img v-bind:src="card.img">
-            <div class="name">{{card.name}}</div>
-            <button class="CardButton">Add to Cart</button>
+                <img v-bind:src="card.img">
+                <div class="name">{{card.name}}</div>
+                <button class="CardButton" v-on:click="addToCart(card)">Add to Cart</button>
         </div>
-        <!-- </a> -->
     </div>
-
-    
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
