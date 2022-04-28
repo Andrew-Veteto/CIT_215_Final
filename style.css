@@ -1,0 +1,40 @@
+.card{
+    height:350px;
+    width:250px;
+    border:solid 1px black;
+    position:relative;
+    font-family: Roboto, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+img{
+    height:230px;
+}
+
+.YAMAHA :hover{
+    background-color: green;
+    color: white;
+}
+
+.Fender{
+    background-color: red;
+    color: white;
+}
+
+.Maton{
+    background-color: blue;
+    color: white;
+}
+
+.name{
+    height:50px;
+    width:160px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom:0;
+}
