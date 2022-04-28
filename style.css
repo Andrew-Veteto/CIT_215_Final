@@ -1,3 +1,8 @@
+#items{
+    display:flex;
+    flex-wrap:wrap;
+  }
+
 .card{
     height:350px;
     width:250px;
@@ -8,6 +13,25 @@
     justify-content:center;
     align-items:center;
     overflow:hidden;
+}
+
+.name{
+    height:50px;
+    width:160px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+.CardButton{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom:0;
 }
 
 img{
@@ -27,14 +51,4 @@ img{
 .Maton{
     background-color: blue;
     color: white;
-}
-
-.name{
-    height:50px;
-    width:160px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:absolute;
-    bottom:0;
 }

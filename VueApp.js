@@ -1,9 +1,6 @@
-
-
 new Vue({
-    el: "#items",
+    el: "#instrament-app",
     data: {
-        message: 'Hover Me!',
         cards:[
             {
                 name:"YAMAHA P-45",
@@ -47,17 +44,20 @@ new Vue({
                 brand: "Maton",
                 img:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRM1qHXggofKidjEPB36RnusOFPFn-cyVaqZuKmef3ES-DvhJAnndYU4MVZVeOD4fNXbEhEAz2HHq2gNA_aLlUB8wUTHZ37Ew&usqp=CAY"
             },
-        ]
+        ],
     },
     methods: {
-        // mouseover: function(){
+        mouseover: function(){
             
-        //     var test = document.getElementById("card");
-        //     test.style.backgroundColor="orange";
-        //   },    
-        // mouseleave: function(){
-        //     var test = document.getElementById("card");
-        //     test.style.backgroundColor="orange";
-        //   }
+            var test = document.getElementById("card");
+            test.style.backgroundColor="orange";
+          },    
+        mouseleave: function(){
+            var test = document.getElementById("card");
+            test.style.backgroundColor="orange";
+          },
+        addInstrament: function(){
+              this.message="ANDREW";
+          }
     }
 })
