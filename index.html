@@ -14,16 +14,37 @@
     </div>
 
     <div id = "formForThing">
-        <button v-on:click="addInstrament">Click Here to add a New Item</button>
+        <button v-on:click="addInstrament(form)">Click Here to add a New Item</button>
+    </div>
+
+    <div id="form" class="form" v-if="form.inCart">
+        <input v-model="form.name" type="text" placeholder="instrament name"> <br>
+        <input v-model="form.instrument" type="text" placeholder="instrument type"> <br>
+        <input v-model="form.price" type="number" placeholder="price"> <br>
+        <input v-model="form.img" type="text" placeholder="img link"> <br>
+        
+        <div>{{message}}</div>
+
+        <h3>Brands: </h3>
+        <label for="Yamaha">Yamaha</label>
+        <input name="brand" type="radio" id="Yamaha" value="YAMAHA" v-model="form.brand">
+        <label for="Fender">Fender</label>
+        <input name="brand" type="radio" id="FENDER" value="Fender" v-model="form.brand">
+        <label for="Maton">Maton</label>
+        <input name="brand" type="radio" id="MATON" value="Maton" v-model="form.brand">
+        <br>
+
+        <button v-on:click="submit">Submit</button>
     </div>
 
     <div id="items">
-        <div v-for = "card in cards" class = "card">
+        <div v-for = "card in cards" v-bind:class="{card}">
                 <img v-bind:src="card.img">
                 <div class="name">{{card.name}}</div>
                 <button class="CardButton" v-on:click="addToCart(card)">Add to Cart</button>
         </div>
     </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

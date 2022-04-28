@@ -14,6 +14,14 @@
     align-items:center;
     overflow:hidden;
 }
+.form{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
 
 .name{
     height:50px;
@@ -38,7 +46,7 @@ img{
     height:230px;
 }
 
-.YAMAHA :hover{
+.YAMAHA{
     background-color: green;
     color: white;
 }
@@ -52,3 +60,17 @@ img{
     background-color: blue;
     color: white;
 }
+
+.popUp{
+    height:100%;
+    width:100%;
+    background-color:rgba(193, 193, 193, 0.66);
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }

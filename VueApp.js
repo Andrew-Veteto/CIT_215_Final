@@ -1,9 +1,11 @@
-new Vue({
+var shop = new Vue({
     el: "#instrament-app",
     data: {
         holdArray: [],
         cartTotal: 0,
         addedCards: 0,
+        message: " ",
+        hoverClass: false,
         cards:[
             {
                 name:"YAMAHA P-45",
@@ -54,19 +56,18 @@ new Vue({
                 img:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRM1qHXggofKidjEPB36RnusOFPFn-cyVaqZuKmef3ES-DvhJAnndYU4MVZVeOD4fNXbEhEAz2HHq2gNA_aLlUB8wUTHZ37Ew&usqp=CAY"
             },
         ],
-        return: {
-            componentKey: 0
-        },
+        form: {
+            name:"",
+            instrument:"",
+            price:0,
+            inCart: false,
+            brand:"",
+            img:""
+        }
     },
-
-    
-
     methods: {
-        mouseover: function(){
-          },    
-        mouseleave: function(){
-          },
-        addInstrament: function(){
+        addInstrament: function(form){
+            form.inCart = !form.inCart;
           },
         clearCart: function(){
             this.cartTotal = 0;
@@ -90,5 +91,24 @@ new Vue({
         copyArray(){
             this.holdArray = JSON.parse(JSON.stringify(this.cards));
         },
+        submit: function(){
+            this.cards.push(this.form);
+            this.addedCards+=1;
+            this.copyArray();
+            this.form={
+                name:"",
+                instrument:"",
+                price:0,
+                inCart: true,
+                brand:"",
+                img:""
+            }
+        },
     }
 })
+
+//fills listArray
+fillListArray();
+function fillListArray(){
+    shop.copyArray();
+}
